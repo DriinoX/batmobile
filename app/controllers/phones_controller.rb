@@ -4,6 +4,6 @@ class PhonesController < ApplicationController
   end
 
   def show
-
+    @phone = Phone.find(params[:id])
   end
 end
