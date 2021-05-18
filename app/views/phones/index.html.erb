@@ -1,0 +1,24 @@
+<div class= "container">`
+   <div class="text-center text-black">
+    <h1>Louer un téléphone</h1>
+     <h3 class="typed-js"></h3>
+  </div>
+
+  <ul>
+    <div class="row">
+      <% @phones.each do |phone| %>
+        <div class="card-trip">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <div class="card-trip-infos">
+          <div>
+            <li><%= phone.model %></li>
+            <p>Short description here!</p>
+          </div>
+            <h2 class="card-trip-pricing">£99.99</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </ul>
+</div>
