@@ -6,19 +6,21 @@
 
   <ul>
     <div class="row">
-      <% @phones.each do |phone| %>
-        <div class="card-trip">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-          <div class="card-trip-infos">
-          <div>
-            <li><%= phone.model %></li>
-            <p>Short description here!</p>
+      <%= link_to 'Réserver', show_phone_path(@phone) %>
+        <% @phones.each do |phone| %>
+          <div class="card-trip">
+            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+            <div class="card-trip-infos">
+            <div>
+              <li><%= phone.model %></li>
+              <p>Ce model est fait pour vous!</p>
+            </div>
+              <h2 class="card-trip-pricing">99.99€/mois</h2>
+              <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+            </div>
           </div>
-            <h2 class="card-trip-pricing">£99.99</h2>
-            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-          </div>
-        </div>
-      <% end %>
+        <% end %>
+      <% %>
     </div>
   </ul>
 </div>
