@@ -1,0 +1,23 @@
+<div class= "container">`
+   <div class="text-center text-black">
+    <h1>Louer un téléphone</h1>
+    <h4></h4>
+  </div>
+  <div class="card-list">
+      <% @phones.each do |phone| %>
+        <%= link_to phone_path(phone) do %>
+          <div class="card-trip">
+            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+            <div class="card-trip-infos">
+            <div>
+              <h3><%= phone.model %></h3>
+              <p>Ce model est fait pour vous!</p>
+            </div>
+              <h2 class="card-trip-pricing">99.99€/mois</h2>
+              <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+  </div>
+</div>
