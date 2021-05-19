@@ -3,8 +3,11 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 5px;
-  width: 30%;
   }
+
+.card-list a{
+  width: 30%;
+}
 
 .card-trip > img {
   height: 200px;
@@ -38,4 +41,10 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.card-list{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
 }
