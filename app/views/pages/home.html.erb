@@ -1,3 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dekexda28/image/upload/v1621351558/banner_gzz6ec.jpg);">
+  <div class="container">
+    <div class="logo">
+      <h1>BATMOBILE</h1>
+    </div>
+    <h2> Tu as besoin rapidement d'un téléphone ? <strong>Louez-le !</strong>!</h2>
+    <p>Choisi le modèle ou la zone géographique recherchée.</p>
+    <%= simple_form_for @phone do |f| %>
+      <div class="f p-4 mt-4">
+        <%= f.input :brand, label: 'Marque' %>
+        <%= f.input :model, mabel: 'Modèle' %>
+      </div>
+      <%= f.submit 'Search', class:"search btn btn-primary mt-3 rounded" %>
+    <% end %>
+  </div>
+</div>
