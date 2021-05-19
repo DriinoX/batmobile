@@ -1,16 +1,21 @@
 
 <div class="container">
-<h2 class="align-middle"><%= @phone.model %></h2>
-
   <div class="card-product">
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-    <div class="card-product-infos">
-      <p class="align-middle"><%= @phone.brand %></p>
-      <p class="align-middle"><%= @phone.state %></p>
-      <p class="align-middle"><%= @phone.description %></p>
+    <div class="card-product-infos d-flex">
+      <div>
+      <h1 class="align-middle"><%= @phone.model %></h1>
+      <p class="align-middle">Marque du téléphone : <%= @phone.brand %></p>
+      <p class="align-middle">Aspect du téléphone : <%= @phone.state %></p>
+      <p>--------------------------------------</p>
+      <p>  </p>
       <p class="align-middle"><%= @phone.user.username %></p>
-      <p class= "">AFFICHER LE PRIX ICI</p>
-      <button type="button" class="btn btn-success">Validez la location</button>
+      <p class="align-middle">description du produit : <%= @phone.description %></p>
+      </div>
+      <div class="prix-reservation-info">
+        <p class= "prix">AFFICHER LE PRIX ICI</p>
+        <button type="button" class="btn btn-success"><%= link_to 'Valider la location', new_phone_booking_path(@phone) %></button>
+      </div>
     </div>
   </div>
 </div>
