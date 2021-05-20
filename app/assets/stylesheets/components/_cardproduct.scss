@@ -2,11 +2,13 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: grid;
+   display: grid;
+  //display: block;
+  float: relative-right;
   grid-template-columns: 120px 120px 120px;
   align-items: start;
   justify-content: space-between;
-  height: 460px;
+  height: 550px;
   width: 90%;
   margin-right: 50px;
   margin-left: 50px;
@@ -62,6 +64,8 @@
 
 .prix {
   margin-bottom: 30px;
+  border-radius: 5px;
+  border: 3px solid $yellow;
 }
 
 .card-model{
@@ -80,5 +84,7 @@
   display: flex;
 
 }
+
+
 
 
