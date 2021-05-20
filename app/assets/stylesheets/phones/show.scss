@@ -1,0 +1,21 @@
+.resume {
+  width: 500px;
+  height: 100%;
+  border-left: 3px solid black;
+  border-radius: 8px;
+  background-color: white;
+  color: white;
+  .desc{
+    border-radius: 5px;
+    border: 3px solid $yellow;
+    background-color: #404039;
+    font-size: 16px;
+    margin: 0;
+    color: #ffffff;
+  }
+}
+
+.ouho{
+  position: relative;
+  left: 270px;
+}

@@ -1,32 +1,36 @@
+<% @phone.id == @first_phones_id ? @previous = @last_phones_id : @previous = @previous_phone %>
 
-<div class="container">
+<%= link_to("&larr Previous", @previous) %>
+
+<div class="container", "text-right">
   <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-    <div class="card-product-infos d-flex">
-      <div>
-      <h1 class="align-middle"><%= @phone.model %></h1>
-      <p class="align-middle">Marque du téléphone : <%= @phone.brand %></p>
-      <p class="align-middle">Aspect du téléphone : <%= @phone.state %></p>
-      <p>--------------------------------------</p>
-      <p>  </p>
-      <p class="align-middle"><%= @phone.user.username %></p>
-      <p class="align-middle">description du produit : <%= @phone.description %></p>
-      </div>
-      <div class="prix-reservation-info">
-        <p class= "prix">AFFICHER LE PRIX ICI</p>
-        <button type="button" class="btn btn-success"><%= link_to 'Valider la location', new_phone_booking_path(@phone) %></button>
-      </div>
-      <% @phone.id == @first_phones_id ? @previous = @last_phones_id : @previous = @previous_phone %>
-
-      <%= link_to("&larr Previous", @previous) %>
-
-      <% @phone.id == @last_phones_id ? @next = @first_phones_id : @next = @next_phone %>
-
-      <%= link_to("Next &rarr;", @next) %>
+    <div class="card-img">
+      <img src="https://boulanger.scene7.com/is/image/Boulanger/bfr_overlay?layer=comp&$t1=&$product_id=Boulanger/0190198457639_h_f_l_0&wid=350&hei=350" />
     </div>
+    <div class="resume pt-4">
+    <h2 class="desc p-3 mx-5 my-2"><%= @phone.model %></h2>
+    <div class="desc p-3 mx-5 my-2">
+      <p>Marque du téléphone : <%= @phone.brand %></p>
+      <p>Aspect du téléphone : <%= @phone.state %></p>
+      <p><%= @phone.user.username %></p>
+      </div>
+      <div class="desc p-3 mx-5 my-2">
+      <p> description du produit : <%= @phone.description %></p>
+      </div>
+      <div class="desc p-3 mx-5 my-2">
+      <p>99,99€/mois</p>
+      </div>
+    <div class="ouho">
+    <button type="button" class="btn btn-success"><%= link_to 'Valider le paiement', new_phone_booking_path(@phone) %></button>
+    </div>
+    </div>
+
   </div>
 </div>
 
+<% @phone.id == @last_phones_id ? @next = @first_phones_id : @next = @next_phone %>
+
+<%= link_to("Next &rarr;", @next) %>
 
 
 
