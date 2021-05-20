@@ -2,11 +2,12 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  position: relative;
-  height: 500px;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 120px 120px 120px;
+  align-items: start;
+  justify-content: space-between;
+  height: 460px;
+  width: 90%;
   margin-right: 50px;
   margin-left: 50px;
   margin-top: 50px;
@@ -52,8 +53,32 @@
   position: relative;
   left: 130px;
   top: 50px;
+  border-radius: 8px;
+  background-color: #404039;
+  border: 2px solid #FFD32B;
+  color: white;
+  display: flex;
 }
 
 .prix {
   margin-bottom: 30px;
 }
+
+.card-model{
+  border-radius: 8px;
+  background-color: #404039;
+  border: 2px solid #FFD32B;
+  color: white;
+  display: flex;
+}
+
+.card-infos{
+  border-radius: 8px;
+  background-color: #404039;
+  border: 2px solid #FFD32B;
+  color: white;
+  display: flex;
+
+}
+
+
