@@ -5,18 +5,21 @@
     </div>
     <h2> Tu as besoin rapidement d'un téléphone ? <strong>Louez-le !</strong>!</h2>
     <p>Choisi le modèle ou la zone géographique recherchée.</p>
-    <%= form_tag phones_path, method: :get do %>
-      <%= text_field_tag :brand,
-        params[:brand],
-        class: "form-control",
-        placeholder: "Marque"
-      %>
-      <%= select_tag :model,
-        options_for_select(["Modèle",'Iphone X', 'Iphone 11', 'Iphone 12', 'Galaxy', 'Note', 'Star', 'P10']),
-        class: "form-control",
-        placeholder: "Modèle"
-      %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
-    <% end %>
+
+    <div class="f p-4 mt-4">
+      <%= form_tag phones_path, method: :get do %>
+        <%= text_field_tag :brand,
+          params[:brand],
+          class: "form-control mb-3",
+          placeholder: "Marque"
+        %>
+        <%= select_tag :model,
+          options_for_select(["Modèle",'Iphone X', 'Iphone 11', 'Iphone 12', 'Galaxy', 'Note', 'Star', 'P10']),
+          class: "form-control",
+          placeholder: "Modèle"
+        %>
+        <%= submit_tag "Rechercher", class: "btn btn-primary mt-3" %>
+      <% end %>
+    </div>
   </div>
 </div>
