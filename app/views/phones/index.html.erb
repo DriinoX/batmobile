@@ -4,7 +4,7 @@
       <h1>Louer un téléphone</h1>
       <%= form_tag phones_path, method: :get do %>
         <div class="search-container">
-          <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Modèle"%>
+          <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Modèle/marque"%>
           <%= submit_tag "Rechercher", class: "m-2 p-2 btn btn-primary bouton"%>
         </div>
       <% end %>
