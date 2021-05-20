@@ -12,5 +12,10 @@
 @import "components/index";
 @import "pages/index";
 @import "bookings/new";
+@import "bookings/show";
 @import "phones/phones";
 @import "phones/show";
+
+html{
+  height: 100%;
+}

@@ -15,6 +15,14 @@
         <p class= "prix">99,99€/mois</p>
       </div>
         <button type="button" class="btn btn-success"><%= link_to 'Valider le paiement', new_phone_booking_path(@phone) %></button>
+      <% @phone.id == @first_phones_id ? @previous = @last_phones_id : @previous = @previous_phone %>
+
+      <%= link_to("&larr Previous", @previous) %>
+
+      <% @phone.id == @last_phones_id ? @next = @first_phones_id : @next = @next_phone %>
+
+      <%= link_to("Next &rarr;", @next) %>
+    </div>
   </div>
 </div>
 
