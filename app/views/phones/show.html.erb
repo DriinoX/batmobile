@@ -7,7 +7,7 @@
   <div class="card-product">
     <div class="card-img">
       <% if @phone.photo.present? %>
-        <%= cl_image_tag phone.photo.key %>
+        <%= cl_image_tag @phone.photo.key %>
       <% end %>
     </div>
     <div class="resume pt-4">
