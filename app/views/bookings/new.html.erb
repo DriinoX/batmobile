@@ -14,8 +14,8 @@
           <div class="f p-4 m-5 align-self-center">
             <div class="w-100 h-0 text-white">
               <%= simple_form_for [ @phone, @booking ] do |f| %>
-              <%= f.input :start_booking %>
-              <%= f.input :end_booking %>
+              <%= f.input :start_booking, html5: true, label:'Début de réservation' %>
+              <%= f.input :end_booking, html5: true, label:'Fin de réservation'%>
               <%= f.submit "Reserver", class: "btn btn-primary mt-3"%>
               <% end %>
             </div>
