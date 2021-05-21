@@ -1,7 +1,7 @@
 <div class="background">
   <div class= "container text-center mt-4">
-    <h1>Vos téléphones en location</h1>
-    <%= link_to 'Ajouter un téléphones', new_phone_path, class:'btn btn-primary mt-3' %>
+    <h1>Vos téléphones</h1>
+    <%= link_to 'Ajouter un téléphone', new_phone_path, class:'btn btn-primary mt-3' %>
     <div class="card-list mt-3">
         <% @phones.each do |phone| %>
           <%= link_to phone_path(phone) do %>
