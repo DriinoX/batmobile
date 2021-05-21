@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :phones,  only: [:index, :show] do
     resources :bookings, only: [:new, :create, :show]
   end
-  resources :boookings, except: [:new, :create, :show]
+  resources :bookings, except: [:new, :create, :show]
 end

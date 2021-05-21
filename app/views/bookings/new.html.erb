@@ -15,11 +15,11 @@
 </header>
 
 <div class="container">
-<%= simple_form_for [ @phone, @booking ] do |f| %>
-  <%= f.input :start_booking %>
-  <%= f.input :end_booking %>
-  <%= f.submit %>
-<% end %>
+  <%= simple_form_for [ @phone, @booking ] do |f| %>
+    <%= f.input :start_booking %>
+    <%= f.input :end_booking %>
+    <%= f.submit %>
+  <% end %>
 </div>
 <!--
 <section class="my-2">
