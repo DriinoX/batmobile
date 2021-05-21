@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-   before_action :authenticate_user!
+  before_action :authenticate_user!
   def new
     @booking = Booking.new
     @phone = Phone.find(params[:phone_id])
@@ -10,9 +10,6 @@ class BookingsController < ApplicationController
     @phone = Phone.find(params[:phone_id])
     @booking.phone_id = @phone.id
     @booking.user_id = current_user.id
-
-
-
     if @booking.save
       redirect_to phone_booking_path(@booking, @phone)
     else
@@ -22,7 +19,10 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
-    # @booking = Booking.all
+  end
+
+  def index
+    @bookings = Booking.where(user: current_user)
   end
 
   private
@@ -30,6 +30,4 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:start_booking, :end_booking)
   end
-
 end
-

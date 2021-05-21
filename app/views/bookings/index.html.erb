@@ -1,0 +1,9 @@
+<h1 class="container mt-4">Mes réservations</h1>
+<div class="reservation container border mt-4 p-3 rounded">
+  <% @bookings.each do |booking| %>
+    <%= link_to phone_path(booking.phone.id, booking.id) do %>
+      <h2> <strong> <%= booking.phone.brand %> - <%= booking.phone.model %></strong></h2>
+    <% end %>
+    <p> Vous avez réservé un <strong><%= booking.phone.model %></strong>  du <%= booking.start_booking %> au <%= booking.end_booking %>. </p>
+  <% end %>
+</div>

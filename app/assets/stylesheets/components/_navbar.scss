@@ -2,6 +2,10 @@
   justify-content: space-between;
   background: rgb(240,240,240);
   align-items: center;
+  opacity: 0.9;
+  position: sticky;
+   top: 0;
+   z-index: 100;
   border-bottom: 5px solid $yellow;
   position: sticky;
    top: 0;
