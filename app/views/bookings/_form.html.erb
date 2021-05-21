@@ -1,0 +1,7 @@
+<div class="container">
+  <%= simple_form_for [ @phone, @booking ] do |f| %>
+    <%= f.input :start_booking, html5: true %>
+    <%= f.input :end_booking, html5: true %>
+    <%= f.submit %>
+  <% end %>
+</div>
