@@ -6,7 +6,9 @@
         <% @phones.each do |phone| %>
           <%= link_to phone_path(phone) do %>
             <div class="card-trip card-border">
-              <%= cl_image_tag phone.photo.key, crop: :fill %>
+              <% if phone.photo.present? %>
+                <%= cl_image_tag phone.photo.key %>
+              <% end %>
               <div class="card-trip-infos">
               <div>
                 <h2><%= phone.model %></h2>
