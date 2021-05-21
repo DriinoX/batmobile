@@ -1,9 +1,8 @@
 <div class="container d-flex align-items-center">
-  <div class= "arrow btn btn-primary mt-3">
-    <% @phone.id == @first_phones_id ? @previous = @last_phones_id : @previous = @previous_phone %>
-
-    <%= link_to("<", @previous) %>
-  </div>
+  <% @phone.id == @first_phones_id ? @previous = @last_phones_id : @previous = @previous_phone %>
+  <%= link_to @previous, class:'btn btn-primary arrow' do %>
+    <p> < </p>
+  <% end %>
   <div class="card-product">
     <div class="card-img">
       <% if @phone.photo.present? %>
@@ -27,15 +26,9 @@
     </div>
 
   </div>
-  <div class= "arrow btn btn-primary mt-3">
   <% @phone.id == @last_phones_id ? @next = @first_phones_id : @next = @next_phone %>
 
-  <%= link_to(">", @next)%>
-  </div>
+  <%= link_to @next, class:'btn btn-primary arrow' do %>
+    <p> > </p>
+  <% end %>
 </div>
-
-
-
-
-
-
