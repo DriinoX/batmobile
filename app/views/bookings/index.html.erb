@@ -1,7 +1,7 @@
-<h1 class="container mt-4">Mes réservation</h1>
+<h1 class="container mt-4">Mes réservations</h1>
 <div class="reservation container border mt-4 p-3 rounded">
   <% @bookings.each do |booking| %>
-    <%= link_to phone_booking_path(booking.phone.id, booking.id) do %>
+    <%= link_to phone_path(booking.phone.id, booking.id) do %>
       <h2> <strong> <%= booking.phone.brand %> - <%= booking.phone.model %></strong></h2>
       <h3 class="EDIT">
         <%= link_to "Modifier ma location", edit_booking_path(booking) %>

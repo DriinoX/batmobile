@@ -1,8 +1,9 @@
-<% @phone.id == @first_phones_id ? @previous = @last_phones_id : @previous = @previous_phone %>
+<div class="container d-flex align-items-center", "text-right">
+  <div class= "arrow btn btn-primary mt-3">
+    <% @phone.id == @first_phones_id ? @previous = @last_phones_id : @previous = @previous_phone %>
 
-<%= link_to("&larr Previous", @previous) %>
-
-<div class="container", "text-right">
+    <%= link_to("<", @previous) %>
+  </div>
   <div class="card-product">
     <div class="card-img">
       <img src="https://boulanger.scene7.com/is/image/Boulanger/bfr_overlay?layer=comp&$t1=&$product_id=Boulanger/0190198457639_h_f_l_0&wid=350&hei=350" />
@@ -17,20 +18,23 @@
       <div class="desc p-3 mx-5 my-2">
       <p> description du produit : <%= @phone.description %></p>
       </div>
-      <div class="desc p-3 mx-5 my-2">
+      <div class="desc p-3 mx-5 my-2 text-right">
       <p>99,99€/mois</p>
       </div>
-    <div class="ouho">
-    <button type="button" class="btn btn-success"><%= link_to 'Valider le paiement', new_phone_booking_path(@phone) %></button>
-    </div>
+   <!--  <div class="ouho">
+    <button class="text-black btn btn-primary mt-3"><%= link_to 'Valider le paiement', new_phone_booking_path(@phone)%></button>
+    </div> -->
+     <%= link_to 'Valider le paiement', new_phone_booking_path(@phone), class: "ouho btn btn-primary mt-3"  %>
     </div>
 
   </div>
+  <div class= "arrow btn btn-primary mt-3">
+  <% @phone.id == @last_phones_id ? @next = @first_phones_id : @next = @next_phone %>
+
+  <%= link_to(">", @next)%>
+  </div>
 </div>
 
-<% @phone.id == @last_phones_id ? @next = @first_phones_id : @next = @next_phone %>
-
-<%= link_to("Next &rarr;", @next) %>
 
 
 
