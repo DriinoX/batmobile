@@ -1,0 +1,22 @@
+<div class="background">
+  <div class= "container text-center mt-4">
+    <h1>Vos téléphones en location</h1>
+    <%= link_to 'Ajouter un téléphones', new_phone_path, class:'btn btn-primary mt-3' %>
+    <div class="card-list mt-3">
+        <% @phones.each do |phone| %>
+          <%= link_to phone_path(phone) do %>
+            <div class="card-trip card-border">
+              <%= cl_image_tag phone.photo.key, crop: :fill %>
+              <div class="card-trip-infos">
+              <div>
+                <h2><%= phone.model %></h2>
+                <p>Du <%= phone.start_dispo %> au  <%= phone.end_dispo %> </p>
+              </div>
+                <h3 class="card-trip-pricing"><%= phone.price %>€/jours</h3>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+    </div>
+  </div>
+</div>

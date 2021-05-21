@@ -1,0 +1,17 @@
+<div class="container mt-4">
+
+  <h1 class="text-center"> Créer un nouveau téléphone</h1>
+
+  <%= simple_form_for @phone do |f|%>
+    <%= f.input :brand, label:"La marque", collection: ['Apple', 'Samsung', 'Huawei', 'Xiaomi'] %>
+    <%= f.input :model, label:"Le modèle" , collection: ['Iphone X', 'Iphone 11', 'Iphone 12', 'Galaxy', 'Note', 'Star', 'P10'] %>
+    <%= f.input :start_dispo, html5: true, label: "Date de début de mise a diposition" %>
+    <%= f.input :end_dispo, html5: true, label:"Date de fin de mise a diposition" %>
+    <%= f.input :price, label:"Prix journalier (€/j)" %>
+    <%= f.input :address, label:"Address/point relais (lieu de récupération de votre téléphone)" %>
+    <%= f.input :state, label:'Etat', collection: ['Correct', 'Bon etat', 'Tres bon etat'] %>
+    <%= f.input :photo, as: :file %>
+    <%= f.input :description, label:"Description" %>
+    <%= f.submit class:"btn btn-primary" %>
+  <% end %>
+</div>

@@ -37,4 +37,24 @@ class PhonesController < ApplicationController
 
     @last_phones_id = @all_phones_array.last
   end
+
+  def new
+    @phone = Phone.new
+  end
+
+  def create
+    @phone = Phone.new(phone_params)
+    @phone.user_id = current_user.id
+    if @phone.save
+      redirect_to my_phones_path
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def phone_params
+    params.require(:phone).permit(:start_dispo, :end_dispo, :brand, :model, :price, :address, :description, :photo, :state)
+  end
 end
