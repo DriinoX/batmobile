@@ -1,20 +1,47 @@
-<header>
-   <div class="overlay"></div>
-    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-      <source src="https://media.giphy.com/media/ToMjGpJ4jULsUli8yxW/giphy.gif">
-    </video>
-  <div class="container h-100">
-    <div class="d-flex h-100 text-center align-items-center">
+ <!--   <div class="overlay"></div> -->
+   <!--  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/Vd3bj2jPe/videoblocks-closeup-blonde-girl-using-smartphone-in-nightclub-portrait-of-smiling-female-person-holding-phone-on-neon-lights-background-cheerful-woman-making-video-on-mobile-phone-under-confetti-at-party_rkbha6dod__e3865c503db32951cc97e991da340d8c__P360.mp4">
+    </video> -->
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.giphy.com/media/ToMjGpJ4jULsUli8yxW/giphy.gif); zoom-out:1.5;">
+  <div class="container h-200">
+    <div class="d-flex h-50 text-center align-items-center">
       <div class="w-100 text-white">
-        <h1 class="display-3">BIENVENUE SUR LA PAGE DE RESERVATION</h1>
-        <p class="lead mb-0">Avec Batmobile tu peyse hyperlourd.</p>
-        <p class="lead mb-0">ok let's go!</p>
+        <h1 class="display-4">BIENVENUE SUR LA PAGE DE RESERVATION</h1>
+        <p class="lead mb-0">
+          Plus qu'une étape pour avoir ton téléphone
+        </p>
+        <div class="container">
+          <div class="f p-4 m-5 align-self-center">
+            <div class="w-100 h-0 text-white">
+              <%= simple_form_for [ @phone, @booking ] do |f| %>
+              <%= f.input :start_booking %>
+              <%= f.input :end_booking %>
+              <%= f.submit "Reserver", class: "btn btn-primary mt-3"%>
+              <% end %>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</header>
+</div>
+  <!-- <div class="logo">
+      <h4>BATMOBILE</h4>
+    </div> -->
 
-<%= render partial: 'form' %>
+
+     <!--  <form action="/phones" accept-charset="UTF-8" method="get">
+        <input type="text" name="brand" id="brand" class="form-control mb-3" placeholder="Marque">
+        <select name="model" id="model" class="form-control" placeholder="Modèle"><option value="Modèle">Modèle</option>
+<option value="Iphone X">Iphone X</option>
+<option value="Iphone 11">Iphone 11</option>
+<option value="Iphone 12">Iphone 12</option>
+<option value="Galaxy">Galaxy</option>
+<option value="Note">Note</option>
+<option value="Star">Star</option>
+<option value="P10">P10</option></select>
+        <input type="submit" name="commit" value="Rechercher" class="btn btn-primary mt-3" data-disable-with="Rechercher">
+</form> -->
 <!--
 <section class="my-2">
   <div class="container h-100">

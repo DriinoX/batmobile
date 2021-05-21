@@ -1,5 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
+
   background: rgb(240,240,240);
   align-items: center;
   opacity: 0.9;
@@ -22,7 +23,16 @@
 .navbar-lewagon .navbar-brand img {
   width: 80px;
 }
-
+.navigation {
+   /* fixed keyword is fine too */
+   position: sticky;
+   top: 0;
+   z-index: 100;
+   /* z-index works pretty much like a layer:
+   the higher the z-index value, the greater
+   it will allow the navigation tag to stay on top
+   of other tags */
+}
 .avatar {
   width: 50px;
   height: 50px;
