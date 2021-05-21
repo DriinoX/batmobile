@@ -6,7 +6,9 @@
   </div>
   <div class="card-product">
     <div class="card-img">
-      <img src="https://boulanger.scene7.com/is/image/Boulanger/bfr_overlay?layer=comp&$t1=&$product_id=Boulanger/0190198457639_h_f_l_0&wid=350&hei=350" />
+      <% if @phone.photo.present? %>
+        <%= cl_image_tag phone.photo.key %>
+      <% end %>
     </div>
     <div class="resume pt-4">
     <h2 class="desc p-3 mx-5 my-2"><%= @phone.model %></h2>
