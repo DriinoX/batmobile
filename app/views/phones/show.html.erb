@@ -23,9 +23,9 @@
       <div class="desc p-3 mx-5 my-2 text-right">
       <p> <%= @phone.price %>€/jours</p>
       </div>
-   <!--  <div class="ouho">
-    <button class="text-black btn btn-primary mt-3"><%= link_to 'Valider le paiement', new_phone_booking_path(@phone)%></button>
-    </div> -->
+    <div class="ouho">
+      <button class="text-black btn btn-primary mt-3"><%= link_to 'Valider le paiement', new_phone_booking_path(@phone)%></button>
+    </div>
      <%= link_to 'Valider le paiement', new_phone_booking_path(@phone), class: "ouho btn btn-primary mt-3"  %>
     </div>
 
