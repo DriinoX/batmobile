@@ -12,18 +12,20 @@
   width: 90%;
   margin-right: 50px;
   margin-left: 50px;
-  margin-top: 50px;
+  margin-top: 20px;
+  border-radius: 40px;
 }
 
 .card-product img {
-  height: 100%;
-  width: 300px;
-  object-fit: cover;
-  padding: 24px;
+    height: 200%;
+    width: 450px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    padding-top: 50px;
 }
 
 .card-product h2 {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
   margin: 0;
 }
@@ -41,7 +43,7 @@
   position: relative;
   bottom: 90px;
   left: 220px;
-  font-size: 50px
+  font-size: 50px;
 }
 
 .card-product .card-product-infos {
